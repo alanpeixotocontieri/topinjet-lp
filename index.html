@@ -113,6 +113,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero__lista li{display:flex;gap:12px;align-items:flex-start}
 .hero__lista svg{width:20px;height:20px;flex:none;margin-top:2px;color:#3B86FF}
 .hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero__dados{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:560px}
+.hero__dados li{display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(120,165,255,.22)}
+.hero__dados svg{width:26px;height:26px;flex:none;color:#3B86FF}
+.hero__dados span{display:grid;gap:2px;font-size:13.5px;line-height:1.35;color:var(--navy-texto);min-width:0}
+.hero__dados b{font-size:19px;font-weight:800;color:var(--branco);letter-spacing:-.01em;line-height:1.15}
+@media (max-width:420px){.hero__dados{grid-template-columns:minmax(0,1fr)}}
 
 /* Formulário */
 .form{background:var(--branco);color:var(--texto);border-radius:14px;padding:clamp(22px,3vw,32px);box-shadow:0 30px 60px -30px rgba(0,0,0,.7);position:relative}
@@ -360,17 +366,16 @@ tfoot td{font-family:var(--f-marca);font-weight:700;background:var(--navy);color
   <div class="hero__foto"><img src="img/fab-maquinas-marca.webp" alt="" fetchpriority="high"></div>
   <div class="wrap hero__in">
     <div class="hero__copy">
-      <p class="hero__local"><span>Injeção de termoplásticos</span><span>B2B</span><span>Bragança Paulista – SP</span></p>
-      <h1 id="h1">A Topinjet combina <em>36 anos</em> de injeção plástica com problemas resolvidos <span class="sub48">em até 48 horas</span>.</h1>
-      <p class="hero__txt">Produzimos peças técnicas em termoplásticos para a sua indústria, do projeto do molde à peça injetada. São 9 injetoras de 35 a 250 toneladas e capacidade para até 100 toneladas por mês.</p>
-      <ul class="hero__lista">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Injeção com o seu molde ou com um molde feito pela nossa ferramentaria</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Peças de 60 g a 600 g para os setores cosmético, cirúrgico, ortopédico e outros</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Equipe técnica própria para resolver o problema rápido, sem empurrar para depois</li>
+      <h1 id="h1">Injeção de termoplásticos de <em>alta precisão</em> para a sua indústria</h1>
+      <p class="hero__txt">Do projeto do molde à peça final, com a agilidade e a confiança de quem atua há mais de 36 anos no mercado.</p>
+      <ul class="hero__dados">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.5 12-1.5 9 5-3 5 3-1.5-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span><b>+36 anos</b>de experiência industrial</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z M3 13l9 5 9-5 M3 17.5l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span><b>100 ton/mês</b>de capacidade produtiva</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16H3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span><b>9 injetoras</b>de 35 a 250 toneladas</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Suporte em até 48h</b>para resolução técnica</span></li>
       </ul>
       <div class="hero__ctas">
         <a class="btn btn--azul" href="#orcamento">Quero um orçamento</a>
-        <a class="btn btn--linha js-wa" href="https://wa.me/5511977065316?text=Ol%C3%A1%2C%20Topinjet!%20Gostaria%20de%20falar%20sobre%20inje%C3%A7%C3%A3o%20de%20pe%C3%A7as%20pl%C3%A1sticas." target="_blank" rel="noopener" data-origem="hero"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
       </div>
     </div>
 
